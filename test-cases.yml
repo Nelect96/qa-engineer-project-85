@@ -1,0 +1,34 @@
+---
+- summary: |
+    Регистрация пользователя
+  requirement: |
+    Возможность зарегистрироваться 
+  prerequisites: |
+    Войти на страницу регистрации (https://codebattle.hexlet.io/users/new?locale=en&next=%2F)
+  test-data: |
+    Тестовые данные
+    Nickname = BestStudent001 Email = BestStudent007@yandex.ru Password = BestStudent001
+  steps:
+    - Вводим Nickname
+    - Вводим Email
+    - Вводим Password
+    - Нажимаем кнопку «Submit»
+  expected-result: |
+    Пользователь должен попасть на страницу LOBBY (https://codebattle.hexlet.io/#lobby)
+
+- summary: |
+    Регистрация пользователя (негативный тест-кейс)
+  requirement: |
+    Возможность зарегистрироваться 
+  prerequisites: |
+    Войти на страницу регистрации (https://codebattle.hexlet.io/users/new?locale=en&next=%2F)
+  test-data: |
+    Тестовые данные
+    Nickname = ЗдесьБудетПростоДлиныйНикнеймЖелательноБольше16Символов Email = BestStudent007@yandex.ру Password = OO
+  steps:
+    - Вводим Nickname
+    - Вводим Email
+    - Вводим Password
+    - Нажимаем кнопку «Submit»
+  expected-result: |
+    Пользователь должен увидеть подсвечанные ошибки в соответствующих полях с описанными ограничениями 
