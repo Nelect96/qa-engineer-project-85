@@ -32,3 +32,34 @@
     - Нажимаем кнопку «Submit»
   expected-result: |
     Пользователь должен увидеть подсвечанные ошибки в соответствующих полях с описанными ограничениями 
+
+- summary: |
+    Вход под своим логином и паролем
+  requirement: |
+    Возможность войти под своим логином и паролем
+  prerequisites: |
+    Войти на страницу входа (https://codebattle.hexlet.io/session/new?locale=en&next=%2F)
+  test-data: |
+     Email = BestStudent007@yandex.ru Password = BestStudent001
+  steps:
+    - Вводим Email
+    - Вводим Password
+    - Нажимаем кнопку «Submit»
+  expected-result: |
+    Пользователь должен увидеть надпись "Successfully authenticated" и попасть на страницу LOBBY (https://codebattle.hexlet.io/#lobby)
+
+- summary: |
+    Вход под своим логином и паролем (негативный тест-кейс)
+  requirement: |
+    Возможность войти под своим логином и паролем
+  prerequisites: |
+    Войти на страницу входа (https://codebattle.hexlet.io/session/new?locale=en&next=%2F)
+  test-data: |
+     Email = BestStudent007@yandex.ру Password = OO
+  steps:
+    - Вводим Email
+    - Вводим Password
+    - Нажимаем кнопку «Submit»
+  expected-result: |
+    Пользователь должен увидеть ошибку "EMAIL_NOT_FOUND"
+
