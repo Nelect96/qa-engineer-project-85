@@ -107,6 +107,58 @@
   expected-result: |
     Пользователь должен увидеть несколько окон: Задачи, чат, и поле ввода решения по задаче 
 
+- summary: |
+    Возможность играть с другом по ссылке.
+  requirement: |
+    Возможность играть с другом по ссылке.
+  prerequisites: |
+    Авторизоваться на сайте (https://codebattle.hexlet.io/session/new?locale=en&next=%2F)
+  test-data: |
+    -
+  steps:
+    - Нажать на "Create a game"
+    - В окне выбрать "With a friend"
+    - В поле "Choose opponent" найти и выбрать друга 
+    - Нажать на "Create a game"
+    - Дождаться подтверждения от друга 
+  expected-result: |
+    Пользователь должен увидеть несколько окон: Задачи, чат, и поле ввода решения по задаче, саоме глевное в поле увидеть Ник друга 
+
+- summary: |
+    Возможность создавать игры.
+  requirement: |
+    Пользователь должен иметь возможность создавать игры.
+  prerequisites: |
+    Авторизоваться на сайте (https://codebattle.hexlet.io/session/new?locale=en&next=%2F)
+  test-data: |
+    -
+  steps:
+    - Нажать на "Create a game"
+    - В окне выбрать Level (любой)
+    - В окне выбрать Game Type (любой)
+    - В окне выбрать Time control (любой)
+    - В окне выбрать Choose task by name or tags (любой)
+    - Нажать на "Create a game"
+  expected-result: |
+    Пользователь должен увидеть несколько окон: Задачи, чат, и поле ввода решения по задаче 
+
+ - summary: |
+    Возможность подключения к существующим играм 
+  requirement: |
+    Пользователь должен иметь возможность участвовать в существующих играх.
+  prerequisites: |
+    Авторизоваться на сайте (https://codebattle.hexlet.io/session/new?locale=en&next=%2F)
+  test-data: |
+    -
+  steps:
+    - Нажать на "Tournaments"
+    - В "Live tournaments" выбрать любой из доступных
+    - Нажать на "Show"
+    - Нажать на "Show"
+  expected-result: |
+    Пользователь должен увидеть несколько окон: Задачи, чат, и поле ввода решения по задаче 
+
+
 
 
 
