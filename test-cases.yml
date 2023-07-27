@@ -181,18 +181,59 @@
   prerequisites: |
     Авторизоваться на сайте (https://codebattle.hexlet.io/session/new?locale=en&next=%2F)
   test-data: |
+    - Код для теста: 
+      def solution(arr):
+      result = [-x for x in arr]
+      return result
+  steps:
+   - Нажать на "Create a game"
+   - В окне выбрать "With a bot"
+   - Вполе "Choose task by name or tags" выбрать "additive inverse"
+   - Нажать на "Create a game"
+   - Вполе "Language" выбрать язык Paython
+   - Подождать 30 секунт бот начнет писать код
+   - В вести код из тестовых данных
+   - Нажать Ctrl + Enter    
+  expected-result: |
+     В ожидании 30 секунд пользователь должен увидеть, что бот начал писать код, когда код вводим мы и нажимаем Ctrl + Enter Увидем картинку с надписью "Woohoo, you're Champion!!!!!"
+
+ - summary: |
+    Общение в чате с соперниками и зрителями
+  requirement: |
+    Пользователь должен иметь возможность общаться с соперниками и зрителями в чате.
+  prerequisites: |
+    Два браузера и два аккаунта
+    Авторизоваться на сайте (https://codebattle.hexlet.io/session/new?locale=en&next=%2F) в двух браузерах на разных аккаунтах
+  test-data: |
+    - Иметь логин и пароль для второго аккаунта
+  steps:
+   - Браузер 1
+   - Нажать на "Create a game"
+   - В окне выбрать "With a bot"
+   - Нажать на "Create a game"
+   - В поле чата написать Hello
+   - Браузер 2
+   - В поле "LOBBY" выбрать действующую игру и нажать "Show"
+   - В поле чата написать Hello, World!
+  expected-result: |
+    Все пользователи которые подключены к игре видят, в режиме реального времении, сообщения в чате и могут свободно писать
+
+ - summary: |
+    Выбор языка програмирования (JavaScript, PHP, Python и Ruby)
+  requirement: |
+    Пользователь может выбрать один из доступных языков программирования (JavaScript, PHP, Python и Ruby) для решения задач
+  prerequisites: |
+    Авторизоваться на сайте (https://codebattle.hexlet.io/session/new?locale=en&next=%2F)
+  test-data: |
     -
   steps:
    - Нажать на "Create a game"
    - В окне выбрать "With a bot"
    - Нажать на "Create a game"
-   - Вполе "Language" выбрать любой из представленных языков програмирования 
+   - Нажать стрелочку в низ в поле "Language" для выбора языка
+   - Убедиться что такие языки как JavaScript, PHP, Python и Ruby в списке есть и выбираються 
   expected-result: |
-    Пользователь должен увидеть что при смене языка в поле редактора меняется и сам язык програмирования. 
-
-
-
-
+    Пользователь должен увидеть список из доступных языков таких как JavaScript, PHP, Python и Ruby
 
 
 
