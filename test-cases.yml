@@ -205,7 +205,7 @@
     Два браузера и два аккаунта
     Авторизоваться на сайте (https://codebattle.hexlet.io/session/new?locale=en&next=%2F) в двух браузерах на разных аккаунтах
   test-data: |
-    - Иметь логин и пароль для второго аккаунта
+   - Иметь логин и пароль для второго аккаунта
   steps:
    - Браузер 1
    - Нажать на "Create a game"
@@ -234,6 +234,68 @@
    - Убедиться что такие языки как JavaScript, PHP, Python и Ruby в списке есть и выбираються 
   expected-result: |
     Пользователь должен увидеть список из доступных языков таких как JavaScript, PHP, Python и Ruby
+
+- summary: |
+    Работа сайта в различных браузерах на последних версиях
+  requirement: |
+    Совместимость: сайт должен быть протестирован на совместимость с последними версиями браузеров.
+  prerequisites: |
+     Авторизоваться на сайте (https://codebattle.hexlet.io/session/new?locale=en&next=%2F)
+  test-data: |
+   - Браузер Chrome 114.0.5735.198, Firefox 114.0.2, Safari 16.5.1 (18615.2.9.11.7) 
+  steps:
+   - Используя браузер Браузер Chrome 114.0.5735.198
+   - Нажать "LOBBY"
+   - Нажать "TOURNAMENTS"
+   - Нажать "COMPLETED GAMES"
+   - Нажать "CREATE A GAME"
+   - В окне выбрать "With a bot"
+   - Нажать на "Create a game"
+   - Перейти в профиль
+   - Используя браузер Браузер Firefox 114.0.2
+   - Нажать "LOBBY"
+   - Нажать "TOURNAMENTS"
+   - Нажать "COMPLETED GAMES"
+   - Нажать "CREATE A GAME"
+   - В окне выбрать "With a bot"
+   - Нажать на "Create a game"
+   - Перейти в профиль
+   - Используя браузер Браузер Safari 16.5.1 (18615.2.9.11.7)
+   - Нажать "LOBBY"
+   - Нажать "TOURNAMENTS"
+   - Нажать "COMPLETED GAMES"
+   - Нажать "CREATE A GAME"
+   - В окне выбрать "With a bot"
+   - Нажать на "Create a game"
+   - Перейти в профиль
+  expected-result: |
+      Пользователь должен увидеть нормальное отображение сайта в различных браузерах
+
+- summary: |
+    Наличие мобильной версии сайта
+  requirement: |
+    Мобильная оптимизация: сайт должен быть удобным на мобильных устройствах.
+  prerequisites: |
+    Авторизоваться на сайте (https://codebattle.hexlet.io/session/new?locale=en&next=%2F)
+  test-data: |
+     Использование сторонего сервиса Mobile-Friendly Test (https://search.google.com/test/mobile-friendly)
+  steps:
+    - Открыть главную страницу сайта в Mobile-Friendly Test (https://search.google.com/test/mobile-friendly)
+  expected-result: |
+      Пользователь должен увидеть оповещение: Страница удобна при просмотре на мобильных устройствах
+
+- summary: |
+    Удобность использования и оптимизация работы сайта Cookies
+  requirement: |
+    Удобство использования: сайт должен быть разработан с учетом удобства использования.
+  prerequisites: |
+    Авторизоваться на сайте (https://codebattle.hexlet.io/session/new?locale=en&next=%2F)
+  test-data: |
+     - 
+  steps:
+    - В DevTools во вкладке Application проверить файлы Cookies
+  expected-result: |
+      Должны передаться файл Cookies с сайта
 
 
 
