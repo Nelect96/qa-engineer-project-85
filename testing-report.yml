@@ -1,0 +1,68 @@
+---
+- summary: |
+    Регистрация пользователя
+  status: pass
+
+- summary: |
+    Регистрация пользователя (негативный тест-кейс)
+  status: pass
+  
+- summary: |
+    Регистрация пользователя
+  status: pass
+
+- summary: |
+    Вход под своим логином и паролем
+  status: pass
+
+- summary: |
+    Вход под своим логином и паролем (негативный тест-кейс)
+  status: pass
+
+- summary: |
+    Рейтинг игроков
+  status: pass
+  
+- summary: |
+    Возможность играть с ботом.
+  status: pass
+
+- summary: |
+    Возможность играть с другом по ссылке.
+  status: pass
+
+  - summary: |
+    Возможность создавать игры.
+  status: pass
+
+- summary: |
+    Возможность подключения к существующим играм 
+  status: pass
+  
+- summary: |
+    Выбор языка програмирования
+  status: pass
+
+- summary: |
+    Результат запуска теста и код соперника
+  status: pass
+  
+- summary: |
+    Общение в чате с соперниками и зрителями
+  status: pass
+
+- summary: |
+    Выбор языка програмирования (JavaScript, PHP, Python и Ruby)
+  status: pass
+  
+- summary: |
+    Работа сайта в различных браузерах на последних версиях
+  status: pass
+
+- summary: |
+    Наличие мобильной версии сайта
+  status: pass
+
+- summary: |
+    Удобность использования и оптимизация работы сайта Cookies
+  status: pass
