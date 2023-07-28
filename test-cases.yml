@@ -259,7 +259,7 @@
 - summary: |
     Наличие мобильной версии сайта
   requirement: |
-    Мобильная оптимизация: сайт должен быть удобным на мобильных устройствах.
+     Мобильная оптимизация: cайт должен иметь мобильную версию. 
   prerequisites: |
     Авторизоваться на сайте (https://codebattle.hexlet.io/session/new?locale=en&next=%2F)
   test-data: |
@@ -268,6 +268,29 @@
     - Открыть главную страницу сайта в Mobile-Friendly Test (https://search.google.com/test/mobile-friendly)
   expected-result: |
       Пользователь должен увидеть оповещение: Страница удобна при просмотре на мобильных устройствах
+
+- summary: |
+    Работа сайта в мобильной версии
+  requirement: |
+    Мобильная оптимизация: сайт должен быть удобным на мобильных устройствах.
+  prerequisites: |
+     Авторизоваться на сайте (https://codebattle.hexlet.io/session/new?locale=en&next=%2F)
+  test-data: |
+     Chrome + DevTools
+  steps:
+   - Перейти в режим разработчика
+   - Выбираем "Toggle device toolbar"
+   - В выподающем меню "Dimensions" выбираем любые устройства для отображения
+   - Нажать "LOBBY"
+   - Нажать "TOURNAMENTS"
+   - Нажать "COMPLETED GAMES"
+   - Нажать "CREATE A GAME"
+   - В окне выбрать "With a bot"
+   - Нажать на "Create a game"
+   - Нажать на аватар в правом верхнем углу 
+   - Пройти по всем ссылкам в профиле
+  expected-result: |
+      Пользователь должен видеть ровное и правильное отображение элементов сайта.
 
 - summary: |
     Удобность использования и оптимизация работы сайта Cookies
