@@ -64,5 +64,9 @@
   status: pass
 
 - summary: |
+    Работа сайта в мобильной версии
+  status: fail
+
+- summary: |
     Удобность использования и оптимизация работы сайта Cookies
   status: pass
