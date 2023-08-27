@@ -49,9 +49,9 @@
     Пользователь должен увидеть надпись "Successfully authenticated" и попасть на страницу LOBBY (https://codebattle.hexlet.io/#lobby)
 
 - summary: |
-    Вход под своим логином и паролем (негативный тест-кейс)
+    Отображение ошибки при вводе неправильного логина или пароля
   requirement: |
-    Возможность войти под своим логином и паролем
+    Вход на сайт с невалидными данными.
   prerequisites: |
     Войти на страницу входа (https://codebattle.hexlet.io/session/new?locale=en&next=%2F)
   test-data: |
