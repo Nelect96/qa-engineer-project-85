@@ -17,21 +17,55 @@
     Пользователь должен попасть на страницу LOBBY (https://codebattle.hexlet.io/#lobby)
 
 - summary: |
-    Отображение ошибки при регистрации и введении некорректного логина или пароля
+    Отображение ошибки при регистрации и введении некорректного логина
   requirement: |
     Регистрация с невалидными даннымы 
   prerequisites: |
     Войти на страницу регистрации (https://codebattle.hexlet.io/users/new?locale=en&next=%2F)
   test-data: |
     Тестовые данные
-    Nickname = ЗдесьБудетПростоДлиныйНикнеймЖелательноБольше16Символов Email = BestStudent007@yandex.ру Password = OO
+    Nickname = ЗдесьБудетПростоДлиныйНикнеймЖелательноБольше16Символов Email = BestStudent007@yandex.ru Password = TestPass
   steps:
     - Вводим Nickname
     - Вводим Email
     - Вводим Password
     - Нажимаем кнопку «Submit»
   expected-result: |
-     Пользователь должен увидеть подсвечанные ошибки в соответствующих полях с описанными ограничениями 
+     Пользователь должен увидеть подсвечанную ошибки в соответствующем поле Nickname
+
+- summary: |
+    Отображение ошибки при регистрации и введении некорректного Email
+  requirement: |
+    Регистрация с невалидными даннымы 
+  prerequisites: |
+    Войти на страницу регистрации (https://codebattle.hexlet.io/users/new?locale=en&next=%2F)
+  test-data: |
+    Тестовые данные
+    Nickname = Nickname100 Email = BestStudent007@yandex.ру Password = TestPass
+  steps:
+    - Вводим Nickname
+    - Вводим Email
+    - Вводим Password
+    - Нажимаем кнопку «Submit»
+  expected-result: |
+     Пользователь должен увидеть подсвечанную ошибки в соответствующем поле Email
+
+- summary: |
+    Отображение ошибки при регистрации и введении некорректного Password
+  requirement: |
+    Регистрация с невалидными даннымы 
+  prerequisites: |
+    Войти на страницу регистрации (https://codebattle.hexlet.io/users/new?locale=en&next=%2F)
+  test-data: |
+    Тестовые данные
+    Nickname = Nickname100 Email = BestStudent007@yandex.ru Password = DD
+  steps:
+    - Вводим Nickname
+    - Вводим Email
+    - Вводим Password
+    - Нажимаем кнопку «Submit»
+  expected-result: |
+     Пользователь должен увидеть подсвечанную ошибки в соответствующем поле Password
 
 - summary: |
     Вход под своим логином и паролем
@@ -49,19 +83,34 @@
     Пользователь должен увидеть надпись "Successfully authenticated" и попасть на страницу LOBBY (https://codebattle.hexlet.io/#lobby)
 
 - summary: |
-    Отображение ошибки при вводе неправильного логина или пароля
+    Отображение ошибки при вводе неправильного Email
   requirement: |
     Вход на сайт с невалидными данными.
   prerequisites: |
     Войти на страницу входа (https://codebattle.hexlet.io/session/new?locale=en&next=%2F)
   test-data: |
-     Email = BestStudent007@yandex.ру Password = OO
+     Email = BestStudent007@yandex.ру Password = TestPass
   steps:
     - Вводим Email
     - Вводим Password
     - Нажимаем кнопку «Submit»
   expected-result: |
     Пользователь должен увидеть ошибку "EMAIL_NOT_FOUND"
+
+- summary: |
+    Отображение ошибки при вводе неправильного Password
+  requirement: |
+    Вход на сайт с невалидными данными.
+  prerequisites: |
+    Войти на страницу входа (https://codebattle.hexlet.io/session/new?locale=en&next=%2F)
+  test-data: |
+     Email = BestStudent007@yandex.ru Password = OO
+  steps:
+    - Вводим Email
+    - Вводим Password
+    - Нажимаем кнопку «Submit»
+  expected-result: |
+    Пользователь должен увидеть ошибку "INVALID_PASSWORD"
 
 - summary: |
     Рейтинг игроков
