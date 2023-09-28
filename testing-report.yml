@@ -24,15 +24,15 @@
   status: pass
   
 - summary: |
-    Возможность играть с ботом.
+    Возможность играть с ботом
   status: pass
 
 - summary: |
-    Возможность играть с другом по ссылке.
+    Возможность играть с другом по ссылке
   status: pass
 
 - summary: |
-    Возможность создавать игры.
+    Возможность создавать игры
   status: pass
 
 - summary: |
@@ -40,7 +40,7 @@
   status: pass
   
 - summary: |
-    Выбор языка програмирования
+    Выбор языка программирования
   status: pass
 
 - summary: |
@@ -52,7 +52,7 @@
   status: pass
 
 - summary: |
-    Выбор языка програмирования (JavaScript, PHP, Python и Ruby)
+    Выбор языка программирования (JavaScript, PHP, Python и Ruby)
   status: pass
   
 - summary: |
@@ -68,5 +68,5 @@
   status: fail
 
 - summary: |
-    Удобность использования и оптимизация работы сайта Cookies
+    Удобность использования и оптимизация работы сайта с Cookies
   status: pass
